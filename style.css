@@ -1,6 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap');
+
 *,
 html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+body {
+    background-color: #e1dcc5;
+}
+
+nav {
+    background-color: #000;
+    height: 7vh;
+    width: 100%;
+    background-image: url(img/library-icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;
+    color: #fff;
+    font-family: 'Alegreya', serif;
+}
+
+li:first-of-type {
+    margin-left: 15vw;
+}
+
+a {
+    display: flex;
+    align-items: flex-end;
+}
+
+img {
+    width:6%;
+}
+
+.bar {
+    display: block;
+    width: 7.5vw;
+    height: 0.7vh;
+    margin: 0.6vh auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+    margin-right: 3vw;
+  }
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+li:last-of-type {
+    display: none;
+}  
+
+li:nth-of-type(2) {
+    display: none;
+}  
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+}  
+.hamburger.active .bar:nth-child(1) {
+    margin-top: 10px;
+    margin-left: 60vw;
+    transform: translateY(12px) rotate(45deg);
+  }
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  margin-top: 10px;
+  margin-left: 60vw;
+  transform: translateY(-16px) rotate(-45deg);
+}
+}
+
+
+@media (min-width: 769px) {
+
+li {
+    display: flex;
+    margin-left: 4vw;
+    width: 20vw;
+} 
+
+li:first-of-type {
+    margin-left: 10vw;
+}
+}
+
