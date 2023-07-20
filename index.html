@@ -12,8 +12,7 @@
     <nav class="nav-bar">
       <ul>
         <li>e-LIBRARY</li> 
-        <li><a><img src="img/plus-img.png">Add Title</a></li>
-        <li><a><img src="img/minus-img.png">Delete Title</a></li>
+        <li><a class="newBook"><img src="img/plus-img.png">New Book</a></li>
       </ul>
       <div class="hamburger">
         <span class="bar"></span>
@@ -22,7 +21,39 @@
       </div>  
     </nav>
   </header>
+  <section class="add-title">
+    <div class="modal-add">
+        <a><img src="img/x-mobile.png" class="x-image"></a>
+        <form class="add-form">
+            <a><h3>ADD A NEW BOOK</h3></a>
+            <label for="title" class="title-label">TITLE:</label>
+            <input type="text" id="title" class="title" maxlength="30" placeholder="Book's Title" required>
+            <label for="author" class="author-label">AUTHOR:</label>
+            <input type="text" id="author" class="author" maxlength="30" placeholder="Author's Name" required> 
+            <label for="status" class="status-label">STATUS:</label>
+            <select id="status" class="status">
+                <option value="read">Read</option>
+                <option value="not read">Not Read</option>
+              </select>
+            <label for="published" class="published-label">YEAR PUBLISHED:</label>
+            <input type="text" id="published" class="published" maxlength="4">
+            <input type = "submit" class="submit" value="SUBMIT"/>
+    </div>
+  </section>
 
-    
+  <section class="books">
+    <div class="cont-hBooks">
+      <h5 class="header-books">TITLE</h5>
+      <h5 class="header-books">AUTHOR</h5>
+      <h5 class="header-books">YEAR</h5>
+      <h5 class="header-books">STATUS</h5>
+    </div>
+    <div class="list-books">
+
+    </div>
+
+  </section>
+
+  <script src="index.js"></script>    
 </body>
 </html>
